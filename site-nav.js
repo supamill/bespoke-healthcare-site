@@ -20,6 +20,7 @@
     { label: 'Coverage', href: '/coverage/', sub: 'Every topic, every profile' },
     { label: 'Mission', href: '/mission/', sub: 'The problem and the team' },
     { label: 'Support', href: '/support/', sub: 'Help with billing, consults, the app' },
+    { label: 'Discord', href: 'https://discord.gg/3djNVrjS8U', sub: 'Join the community' },
     { label: 'Plans', href: '/#plans', sub: 'Free $0 · Starter $49.99 · Core $79.99 · Plus $125.99' }
   ];
 
@@ -69,6 +70,7 @@
         'color:' + (active ? ORANGE : INK)
       ].join(';'));
       a.href = item.href;
+      if (/^https?:/.test(item.href)) { a.target = '_blank'; a.rel = 'noopener'; }
       a.appendChild(el('span', 'font-size:1.125rem;font-weight:600;letter-spacing:-0.02em', item.label));
       if (item.sub) a.appendChild(el('span', 'font-family:' + MONO + ';font-size:0.6875rem;color:' + MUTED + ';text-align:right', item.sub));
       a.addEventListener('click', function () { close(); });
