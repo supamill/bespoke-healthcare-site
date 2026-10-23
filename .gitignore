@@ -4,3 +4,5 @@ source-material/
 .image-slots.state.json
 .vercel/
 .DS_Store
+.vercel
+.env*
