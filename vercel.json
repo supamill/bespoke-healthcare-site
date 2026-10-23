@@ -11,5 +11,40 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "shifu.health"
+        }
+      ],
+      "destination": "https://bespoke.healthcare/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.shifu.health"
+        }
+      ],
+      "destination": "https://bespoke.healthcare/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.bespoke.healthcare"
+        }
+      ],
+      "destination": "https://bespoke.healthcare/:path*",
+      "permanent": true
+    }
   ]
 }
